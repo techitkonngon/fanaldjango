@@ -1,0 +1,1 @@
+web: gunicorn tokra007.wsgi
