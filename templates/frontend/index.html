@@ -1,7 +1,6 @@
 {% extends 'frontend/base.html' %}
-{% block title %} Home {% endblock %}
+{% block title %} Home  {% endblock %}
 {% block content %}
-
 <div class="container">
     <table class="table">
         <thead>
@@ -9,32 +8,21 @@
                 <th>Name</th>
                 <th>Detail</th>
                 <th>Barcode</th>
-                <th>Qty</th>
+                <th>QTy</th>
                 <th>Price</th>
                 <th>Status</th>
             </tr>
         </thead>
         <tbody>
-            {% for p in product %}
+            {% for p in products %}
             <tr>
-                <td>
-                    {{p.product_name}}
-                </td>
-                <td>
-                    {{p.product_detail}}
-                </td>
-                <td>
-                    {{p.product_barcode}}
-                </td>
-                <td>
-                    {{p.product_qty}}
-                </td>
-                <td>
-                    {{p.product_price}}
-                </td>
-                <td>
-                    {{p.product_status}}
-                </td>
+                <td>{{p.product_name}}</td>
+                <td>{{p.product_detail}}</td>
+                <td>{{p.product_barcode}}</td>
+                <td>{{p.product_qty}}</td>
+                <td>{{p.product_price}}</td>
+                <td>{{p.product_status}}</td>
+
             </tr>
             {% endfor %}
         </tbody>
